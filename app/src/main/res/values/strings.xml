@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Hash Generator App</string>
+    <string name="hint_algorithm_type">Choose Algorithm Type</string>
+    <string name="placeholder_text">Enter text to secured</string>
+    <string name="hint_text">Plain Text</string>
+    <string name="secure_the_text_button">Secure the text</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="22dp"
+    tools:context=".ui.detail.DetailFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="This is example for the result"
+        style="@style/HeadingText"
+        android:textSize="28sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:text="@string/secure_the_text_button"
+        app:backgroundTint="@color/button_color"
+        style="@style/HeadingText"
+        android:paddingVertical="12dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_copy"
+        app:iconGravity="textStart"
+        app:iconTint="@color/white"
+        app:iconPadding="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.andriawan.hashgeneratorapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.andriawan.hashgeneratorapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        installSplashScreen()
         setContentView(binding?.root)
     }
 

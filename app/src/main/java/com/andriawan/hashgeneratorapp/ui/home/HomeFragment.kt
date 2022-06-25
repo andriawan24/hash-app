@@ -34,8 +34,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
                     )
                 }
             } else {
-                showToast("Please choose the algorithm and enter the plain text first")
+                showToast(requireContext().getString(R.string.error_secure_form))
             }
+        }
+
+        binding.clearButton.setOnClickListener {
+            binding.algorithmChooserAutoCompleteView.setText("")
+            binding.plainTextTextView.setText("")
         }
     }
 

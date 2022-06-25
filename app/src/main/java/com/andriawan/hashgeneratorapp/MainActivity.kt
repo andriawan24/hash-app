@@ -1,10 +1,8 @@
 package com.andriawan.hashgeneratorapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.andriawan.hashgeneratorapp.databinding.ActivityMainBinding
-import java.security.AlgorithmParameters
-import java.security.MessageDigest
 
 class MainActivity : AppCompatActivity() {
 

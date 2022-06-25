@@ -15,15 +15,11 @@ class DetailViewModel : ViewModel() {
 
     fun processPlainText(plainText: String, algorithm: String) {
         try {
-            try {
-                val bytes = MessageDigest.getInstance(algorithm).digest(plainText.toByteArray())
-                val result = bytes.joinToString("") { "%02x".format(it) }
-                Log.i(DetailViewModel::class.simpleName, "result is: $result")
-                _showResult.value = SingleEvent(result)
-            } catch (e: NoSuchAlgorithmException) {
-                Log.e(DetailViewModel::class.simpleName, "processPlainText: ${e.localizedMessage}")
-            }
-        } catch (e: Exception) {
+            val bytes = MessageDigest.getInstance(algorithm).digest(plainText.toByteArray())
+            val result = bytes.joinToString("") { "%02x".format(it) }
+            Log.i(DetailViewModel::class.simpleName, "result is: $result")
+            _showResult.value = SingleEvent(result)
+        } catch (e: NoSuchAlgorithmException) {
             Log.e(DetailViewModel::class.simpleName, "processPlainText: ${e.localizedMessage}")
         }
     }

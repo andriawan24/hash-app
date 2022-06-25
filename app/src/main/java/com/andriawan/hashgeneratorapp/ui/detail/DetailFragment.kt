@@ -3,7 +3,6 @@ package com.andriawan.hashgeneratorapp.ui.detail
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
@@ -53,17 +52,23 @@ class DetailFragment : BaseFragment<FragmentDetailBinding, DetailViewModel>() {
 
     private suspend fun showCopyTextAnimation() {
         binding.successCopiedLinearLayout.animate()
-            .translationY(0F)
-            .alpha(1.0f).duration = 400L
+            .translationY(DEFAULT_TRANSLATION)
+            .alpha(SHOW_ALPHA).duration = DURATION_LONG
 
-        delay(3000)
+        delay(DELAY_TIME)
 
         binding.successCopiedLinearLayout.animate()
             .translationY(-binding.successCopiedLinearLayout.height.toFloat())
-            .alpha(0.0f).duration = 400L
+            .alpha(HIDE_ALPHA).duration = DURATION_LONG
     }
 
     companion object {
         private const val LABEL_COPIED = "Copied secured text"
+
+        private const val DURATION_LONG = 400L
+        private const val DEFAULT_TRANSLATION = 0F
+        private const val DELAY_TIME = 3000L
+        private const val SHOW_ALPHA = 1.0F
+        private const val HIDE_ALPHA = 0.0F
     }
 }

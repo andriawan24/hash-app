@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.andriawan.hashgeneratorapp.data.HashType
 import com.andriawan.hashgeneratorapp.utils.SingleEvent
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel : ViewModel() {
 
     private var _hashTypes = MutableLiveData<List<HashType>>()
     val hashTypes: LiveData<List<HashType>> = _hashTypes

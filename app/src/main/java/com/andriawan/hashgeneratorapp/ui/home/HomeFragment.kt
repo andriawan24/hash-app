@@ -16,8 +16,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
 
     override fun onInitViews() {
         binding.secureButton.setOnClickListener {
-            if (binding.algorithmChooserAutoCompleteView.text.isNotEmpty()
-                && binding.plainTextTextView.text?.isNotEmpty() == true
+            if (binding.algorithmChooserAutoCompleteView.text.isNotEmpty() &&
+                binding.plainTextTextView.text?.isNotEmpty() == true
             ) {
                 val plainText = binding.plainTextTextView.text.toString()
                 val algorithms = viewModel.hashTypes.value ?: emptyList()

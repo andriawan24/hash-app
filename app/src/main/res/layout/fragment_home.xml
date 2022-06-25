@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="22dp"
     android:background="@color/background"
-    tools:theme="@style/Theme.HashGeneratorApp"
-    tools:context=".ui.home.HomeFragment">
+    android:padding="22dp"
+    tools:context=".ui.home.HomeFragment"
+    tools:theme="@style/Theme.HashGeneratorApp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -17,28 +17,28 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            style="@style/HeadingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            style="@style/HeadingText"
-            android:text="@string/app_name" />
+            android:text="@string/app_name"
+            android:textAlignment="center" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="80dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:hint="@string/hint_algorithm_type"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_algorithm_type">
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/algorithmChooser_autoCompleteView"
-                android:layout_width="match_parent"
-                android:inputType="none"
                 style="@style/RegularText"
-                android:layout_height="wrap_content" />
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,23 +47,23 @@
             android:layout_height="20dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:hint="@string/hint_text"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_text"
             app:counterEnabled="true"
             app:counterMaxLength="100"
             app:placeholderText="@string/placeholder_text"
-            app:placeholderTextAppearance="@style/RegularText"
-            android:layout_height="wrap_content">
+            app:placeholderTextAppearance="@style/RegularText">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/plainText_textView"
+                style="@style/RegularText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
-                style="@style/RegularText"
-                android:minLines="6"
-                android:maxLines="6" />
+                android:maxLines="6"
+                android:minLines="6" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,15 +73,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/secure_button"
-            android:layout_width="match_parent"
-            android:text="@string/secure_the_text_button"
-            app:backgroundTint="@color/button_color"
             style="@style/HeadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingVertical="12dp"
+            android:text="@string/secure_the_text_button"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textAllCaps="false"
-            android:layout_height="wrap_content" />
+            app:backgroundTint="@color/button_color" />
 
         <View
             android:layout_width="match_parent"
@@ -89,15 +89,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/clear_button"
-            android:layout_width="match_parent"
-            android:text="@string/clear_button"
-            app:backgroundTint="@color/red"
             style="@style/HeadingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:paddingVertical="12dp"
-            android:textSize="14sp"
+            android:text="@string/clear_button"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:layout_height="wrap_content" />
+            android:textSize="14sp"
+            app:backgroundTint="@color/red" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

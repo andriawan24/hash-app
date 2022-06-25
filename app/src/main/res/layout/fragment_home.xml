@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:padding="22dp"
     android:background="@color/background"
+    tools:theme="@style/Theme.HashGeneratorApp"
     tools:context=".ui.home.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -71,22 +72,6 @@
             android:layout_height="40dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/clear_button"
-            android:layout_width="match_parent"
-            android:text="@string/clear_button"
-            app:backgroundTint="@color/teal_700"
-            style="@style/HeadingText"
-            android:paddingVertical="12dp"
-            android:textSize="14sp"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:layout_height="wrap_content" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
-
-        <com.google.android.material.button.MaterialButton
             android:id="@+id/secure_button"
             android:layout_width="match_parent"
             android:text="@string/secure_the_text_button"
@@ -96,6 +81,22 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textAllCaps="false"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clear_button"
+            android:layout_width="match_parent"
+            android:text="@string/clear_button"
+            app:backgroundTint="@color/red"
+            style="@style/HeadingText"
+            android:paddingVertical="12dp"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             android:layout_height="wrap_content" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>

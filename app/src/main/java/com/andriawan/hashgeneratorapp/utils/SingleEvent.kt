@@ -6,11 +6,11 @@ class SingleEvent<T>(
     private var isHandled = false
 
     fun hasBeenHandled(): T? {
-        if (isHandled) {
-            return null
+        return if (isHandled) {
+            null
+        } else {
+            isHandled = true
+            content
         }
-
-        isHandled = true
-        return content
     }
 }

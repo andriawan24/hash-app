@@ -5,35 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:padding="22dp"
     tools:context=".ui.detail.DetailFragment">
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/successCopied_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#08A547"
+        android:orientation="vertical"
+        android:alpha="0.0"
+        android:padding="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/RegularText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/success_copy_text"
+            android:textColor="@color/white" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <TextView
+        android:id="@+id/result_textView"
+        style="@style/HeadingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="This is example for the result"
-        style="@style/HeadingText"
-        android:textSize="28sp"
+        android:padding="22dp"
         android:gravity="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This is example for the result" />
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:text="@string/secure_the_text_button"
-        app:backgroundTint="@color/button_color"
+        android:id="@+id/copy_button"
         style="@style/HeadingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
         android:paddingVertical="12dp"
-        android:textSize="18sp"
+        android:text="@string/copy_button"
         android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:backgroundTint="@color/button_color"
         app:icon="@drawable/ic_copy"
         app:iconGravity="textStart"
-        app:iconTint="@color/white"
         app:iconPadding="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_height="wrap_content" />
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

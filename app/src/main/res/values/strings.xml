@@ -6,4 +6,6 @@
     <string name="secure_the_text_button">Secure the text</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="copy_button">Copy</string>
+    <string name="success_copy_text">Text Copied!</string>
 </resources>

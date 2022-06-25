@@ -15,14 +15,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     }
 
     override fun onInitViews() {
-        viewModel.getHashTypes()
-
         binding.secureButton.setOnClickListener {
             if (binding.algorithmChooserAutoCompleteView.text.isNotEmpty()
                 && binding.plainTextTextView.text?.isNotEmpty() == true
             ) {
                 val plainText = binding.plainTextTextView.text.toString()
-                val algorithm = viewModel.hashTypes.value?.first {
+                val algorithms = viewModel.hashTypes.value ?: emptyList()
+                val algorithm = algorithms.find {
                     it.name == binding.algorithmChooserAutoCompleteView.text.toString()
                 }
 
@@ -48,5 +47,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
                 binding.algorithmChooserAutoCompleteView.setAdapter(adapter)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getHashTypes()
     }
 }
